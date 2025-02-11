@@ -5,6 +5,7 @@ import {
   GoogleSigninButton,
   statusCodes,
 } from '@react-native-google-signin/google-signin';
+import { signIn } from './comps/signin';
 
 GoogleSignin.configure({
   webClientId: '173077610258-o8nichqs89b05ol41ahkmlausineba5k.apps.googleusercontent.com', 
@@ -22,6 +23,7 @@ export default function App() {
       <GoogleSigninButton 
       size={GoogleSigninButton.Size.Wide}
       color={GoogleSigninButton.Color.Dark}
+      onPress={signIn}
       />
       <StatusBar style="auto" />
     </View>
